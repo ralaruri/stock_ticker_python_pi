@@ -1,5 +1,6 @@
 
 # import needed libraries
+from datetime import datetime, timedelta
 import quandl
 import time
 import pandas as pd
@@ -7,6 +8,8 @@ import pandas as pd
 ## yyyy-d-m format
 print (time.strftime("%Y-%m-%d"))
 today = (time.strftime("%Y-%m-%d"))
+yesterday = datetime.strftime(datetime.now() - timedelta(1), '%Y-%m-%d')
+print (yesterday)
 
 
 # add quandl API key for unrestricted
