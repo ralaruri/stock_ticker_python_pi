@@ -6,10 +6,10 @@ import time
 import pandas as pd
 
 ## yyyy-d-m format
-print (time.strftime("%Y-%m-%d"))
+#print (time.strftime("%Y-%m-%d"))
 today = (time.strftime("%Y-%m-%d"))
 yesterday = datetime.strftime(datetime.now() - timedelta(1), '%Y-%m-%d')
-print (yesterday)
+#print (yesterday)
 
 
 # add quandl API key for unrestricted
@@ -23,12 +23,49 @@ quandl.ApiConfig.api_key = 'XkzbezVA_z4atB-drwFE'
 
 data = quandl.get_table('WIKI/PRICES', ticker = ['AAPL', 'CVX', 'RTN', 'MRK'], 
                         qopts = { 'columns': ['ticker', 'date', 'adj_open'] }, 
-                        date = { 'gte': '2018-1-1', 'lte': today }, 
+                        date = { 'gte': yesterday, 'lte': today }, 
                         paginate=True)
 
-new = data.set_index('date')
-clean_data = new.pivot(columns='ticker')
+#new = data.set_index('ticker')
+#clean_data = new.pivot(columns='ticker')
 
 
-print (data)
-print (clean_data)
+print(data.head())
+
+#print (clean_data)
+
+#clean_data.to_csv(today+ 'prices.csv', sep ='\t', encoding ='utf-8')
+data.to_csv('prices2.csv',sep =' ', encoding = 'utf-8')
+
+newData = pd.read_csv('prices2.csv',skiprows=[0], header=None)
+
+print(newData.head())
+
+stringData = newData.to_string(header=False, index=False, index_names=False).split('\n')
+
+str1 = ''.join(stringData)
+
+
+print (stringData)
+print (str1)
+#f = open('text.txt', 'w')
+#f.write(stringData)
+#f.close()
+
+
+import tkinter as tk
+
+root = tk.Tk()
+deli = 100           # milliseconds of delay per character
+svar = tk.StringVar()
+labl = tk.Label(root, textvariable=svar, height=10)
+
+def shif():
+    shif.msg = shif.msg[1:] + shif.msg[0]
+    svar.set(shif.msg)
+    root.after(deli, shif)
+
+shif.msg = str1
+shif()
+labl.pack()
+root.mainloop()
