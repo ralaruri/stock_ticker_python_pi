@@ -16,7 +16,6 @@ scrollphathd.rotate(270)
 
 while True:
     scrollphathd.clear()
-
     # See https://docs.python.org/2/library/time.html
     # for more information on what the time formats below do.
 
