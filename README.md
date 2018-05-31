@@ -33,3 +33,9 @@ scp /Users/Ramzi/Documents/robotmouth.py pi@ramzipi:python/
 scp /Users/Ramzi/Documents/mouth.bmp pi@ramzipi:python/
 scp /Users/Ramzi/Documents/protraitclock.py pi@ramzipi:python/
 scp /Users/Ramzi/Documents/cpu.py pi@ramzipi:python/
+
+
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=bJVFLXuJrB4
+" target="_blank"><img src="http://img.youtube.com/vi/bJVFLXuJrB4/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
