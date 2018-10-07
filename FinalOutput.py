@@ -15,7 +15,7 @@ yesterday = datetime.strftime(datetime.now() - timedelta(1), '%Y-%m-%d')
 
 
 # add quandl API key for unrestricted
-quandl.ApiConfig.api_key = 'YOUR API KEY HERE'
+quandl.ApiConfig.api_key = ''
 
 
 # get the table for daily stock prices and,
@@ -68,7 +68,7 @@ while True:
     time.sleep(0.05)
 
 
-import tkinter as tk
+'''import tkinter as tk
 
 root = tk.Tk()
 deli = 100           # milliseconds of delay per character
@@ -83,4 +83,4 @@ def shif():
 shif.msg = str1
 shif()
 labl.pack()
-root.mainloop()
+root.mainloop()'''
