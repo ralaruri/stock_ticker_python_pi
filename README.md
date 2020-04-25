@@ -5,6 +5,12 @@
 * The Pi Zero W is great, but is underpowered to the point utilizing the GUI interface for the OS is unrealistic and incredibly slow. 
 * In this Project I created a stock ticker that pull data using quandl api
 
+
+## Check out the Video of How It works!!
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=bJVFLXuJrB4
+" target="_blank"><img src="http://img.youtube.com/vi/bJVFLXuJrB4/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="480" height="240" border="10" /></a>
+
 ## Tools:
   * Python
     * Numpy
@@ -70,10 +76,4 @@ you'll need to follow it in this order otherwise it won't work, installing quand
 3. Better parse the data frame to only display prices and tickers more fluidly
 
 
-
-
-## Check out the Video of how it works!!
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=bJVFLXuJrB4
-" target="_blank"><img src="http://img.youtube.com/vi/bJVFLXuJrB4/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
