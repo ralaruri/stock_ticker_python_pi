@@ -52,7 +52,7 @@ scp /Users/Ramzi/Documents/stockticker.py pi@ramzipi:python/
 scp /Users/Ramzi/Documents/stockticker2.py pi@ramzipi:python/
 
 
-### Step 4: How to Run python pile within raspberry pi:
+### Step 4: How to Run python file within raspberry pi:
 
 python filename.py 
 
